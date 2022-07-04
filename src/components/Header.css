@@ -1,11 +1,12 @@
 .App-header {
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
+  /*font-size: calc(10px + 2vmin);*/
   color: white;
  -webkit-box-shadow: -2px -2px 50px 3px rgba(51,51,51,1);
 -moz-box-shadow: -2px -2px 50px 3px rgba(51,51,51,1);
 box-shadow: -2px -2px 50px 3px rgba(51,51,51,1);
+background: #b93c3c;
 }
 
 header h1 {

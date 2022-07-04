@@ -3,7 +3,7 @@ import './Header.css'
 
 const Header = () => {
   return (
-    <header className="App-header"><h1> 🎬 Movies Hub 🎥 </h1></header>
+    <header onClick={() => window.scroll(0,0)} className="App-header"><h1> 🎬 Movies Hub 🎥 </h1></header>
   )
 }
 

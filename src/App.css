@@ -1,11 +1,15 @@
+
+
 .App {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
   text-align: center;
   background-color: #2c467a;
-  font-family: 'Montserrat', sans-serif;  
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  height: 100vh;
+ 
+
 }
 
 /*

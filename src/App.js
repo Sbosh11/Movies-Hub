@@ -1,17 +1,28 @@
 import './App.css';
-import Header from './components/Header';
-import SimpleBottomNavigation from './components/NavMain';
+//import Header from './components/Header';
+//import SimpleBottomNavigation from './components/FooterNav';
+import AppRouter from './components/Route';
 
-//import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
+
+
+/*export const Component = (props) => {
+  return(
+    <div>
+      {props.children}
+    </div>
+  )
+}*/
+
+
 
 function App() {
   return (
-  
      <div className="App">
-      <Header/>
-    <SimpleBottomNavigation/>
+      
+        <AppRouter />
+  
     </div>
-
+    
   );
 }
 
