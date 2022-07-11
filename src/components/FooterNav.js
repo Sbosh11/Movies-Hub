@@ -38,6 +38,8 @@ useEffect(() => {
        //bgcolor: '#2C467A',
         bgcolor: '#b93c3c', 
         boxShadow:'-2px -2px 50px 3px rgb(51 51 51)',
+        "&& .Mui-selected": {
+        color: "#90bce9"}
      }}
 
         showLabels

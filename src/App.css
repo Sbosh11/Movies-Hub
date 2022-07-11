@@ -1,4 +1,6 @@
-
+* {
+  scroll-behavior: smooth;
+}
 
 .App {
   display: flex;
@@ -10,6 +12,11 @@
   height: 100vh;
  
 
+}
+
+.pTitle {
+  text-align: center;
+  font-weight: 100;
 }
 
 /*

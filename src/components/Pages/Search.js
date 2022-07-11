@@ -2,9 +2,7 @@ import React from 'react'
 
 const Search = () => {
   return (
-    <div>
-        <span className="pageTitle">Search</span>
-    </div>
+    <h2 className='pTitle'>Movies</h2>
   )
 }
 

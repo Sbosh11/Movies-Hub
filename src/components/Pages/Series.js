@@ -2,9 +2,7 @@ import React from 'react'
 
 const Series = () => {
   return (
-    <div>
-        <span className="pageTitle">Series</span>
-    </div>
+    <h2 className='pTitle'>Movies</h2>
   )
 }
 

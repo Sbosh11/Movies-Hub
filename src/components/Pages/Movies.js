@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Movies = () => {
-  return <div>Movies</div>
+  return <h2 className='pTitle'>Movies</h2>
  
 }
 

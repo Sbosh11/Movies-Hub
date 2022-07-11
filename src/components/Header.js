@@ -1,9 +1,11 @@
 import React from 'react';
-import './Header.css'
+import './Header.css';
+
 
 const Header = () => {
+
   return (
-    <header onClick={() => window.scroll(0,0)} className="App-header"><h1> 🎬 Movies Hub 🎥 </h1></header>
+    <span className="appHeader" id='appHeader'onScroll={(e) => console.log("scrolling!", e.target.scrollTop)} > 🎬 Movies Hub 🎥 </span>
   )
 }
 
