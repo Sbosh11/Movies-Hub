@@ -16,7 +16,7 @@ const MainContent = ({
     <div className="media">
         <img className="poster"
         src={ poster? `${img_300}/${poster}`: unavailable } alt={title} />
-        <Badge badgeContent={vote_average.toFixed(2)} color={vote_average> 6? 'primary':'secondary'} />
+        <Badge badgeContent={vote_average?.toFixed(1)} color={vote_average> 6? 'primary':'secondary'} />
         <b className='title'>{title}</b>
         <div className="subTitle">
         <span>{media_type === "tv" ? "TV Series" : "Movies"}</span>

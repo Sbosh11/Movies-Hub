@@ -13,6 +13,7 @@ const Trending = () => {
   // const {data} = await axios.get("https://api.themoviedb.org/3/trending/all/day?api_key=38b23aabd580d92198322057697231b3");
    console.log(data);
    setContent(data.results);
+   setPage(data.total_pages);
   };
   useEffect(() => {
     fetchTrending(); 
@@ -22,7 +23,8 @@ const Trending = () => {
     <div>
        <h2 className='pTitle'>Movies</h2>
         <div className="trends">
-          {content && content.map((c) => (<MainContent 
+          {content && content.map((c) => (
+          <MainContent 
           key={c.id} 
           id={c.id} 
           poster={c.poster_path}
@@ -30,9 +32,11 @@ const Trending = () => {
           date={c.first_air_date || c.release_date}
           media_type={c.media_type}
           vote_average={c.vote_average}
+
+
           />))}
         </div>
-         <CustomPagination setPage={setPage} />
+         <CustomPagination setPage={setPage} page={page} />
     </div>
   );
 };
