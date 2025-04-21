@@ -24,6 +24,11 @@ const Trending = () => {
   return (
     <div>
       <h1 className="pTitle">Trending</h1>
+      <div>
+        <ul>
+          <li>All</li>
+        </ul>
+      </div>
       <div className="trends">
         {content &&
           content.map((c) => (
