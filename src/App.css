@@ -7,11 +7,11 @@
   flex-direction: column;
   text-align: center;
   background-color: #2c467a;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #fff;
-  height: 100vh;
- 
-
+  overflow-x: hidden;
+  overflow-y: auto;
+  /*min-height: 100vh;*/
 }
 
 .pTitle {
@@ -31,4 +31,3 @@
   }
 }
 */
-

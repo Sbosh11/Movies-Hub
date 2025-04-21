@@ -1,5 +1,6 @@
 .trends {
-    display:flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  overflow-x: auto;
+  overflow-wrap: break-word;
 }
