@@ -1,6 +1,55 @@
-.trends {
+.sectionTrailers {
+  background: #b93c3c;
+  padding: 5% 10%;
+}
+
+.trends,
+.trailers {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: nowrap; /* VERY important for Horizontal Scroll */
   overflow-x: auto;
-  overflow-wrap: break-word;
+  gap: 16px;
+  padding: 10px;
+}
+
+.category-list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.category-list li.active {
+  background: #b93c3c;
+  text-decoration: underline;
+  padding: 7px 15px;
+  border-radius: 2px;
+}
+
+.trailers {
+  display: flex;
+  gap: 20px;
+}
+
+.trailer-item {
+  /*background: #f8f8f8;*/
+  padding: 15px;
+  border-radius: 10px;
+  width: 500px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }

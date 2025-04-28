@@ -1,0 +1,7 @@
+.movies-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 16px;
+  margin: 100px;
+}
