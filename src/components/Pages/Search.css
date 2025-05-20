@@ -1,0 +1,47 @@
+.search-container {
+  padding: 1rem;
+  color: white;
+}
+
+.search-input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.search-button {
+  background-color: #90bce9;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-options {
+  margin-bottom: 1rem;
+}
+
+.checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
