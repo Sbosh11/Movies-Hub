@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import MainContent from "../MainContent/MainContent";
 import "./Search.css";
@@ -15,15 +15,17 @@ const categories = [
 
 const Search = () => {
   const [query, setQuery] = useState("");
-  const [selectedCategories, setSelectedCategories] = useState(categories.map(c => c.key));
+  const [selectedCategories, setSelectedCategories] = useState(
+    categories.map((c) => c.key)
+  );
   const [results, setResults] = useState({});
 
   const API_KEY = process.env.REACT_APP_API_KEY;
   const BASE_URL = "https://api.themoviedb.org/3/search/";
 
   const handleCheckboxChange = (key) => {
-    setSelectedCategories(prev =>
-      prev.includes(key) ? prev.filter(item => item !== key) : [...prev, key]
+    setSelectedCategories((prev) =>
+      prev.includes(key) ? prev.filter((item) => item !== key) : [...prev, key]
     );
   };
 
@@ -58,7 +60,9 @@ const Search = () => {
     if (!items || items.length === 0) return null;
     return (
       <div key={category}>
-        <h2 className="section-title">{categories.find(c => c.key === category)?.name}</h2>
+        <h2 className="section-title">
+          {categories.find((c) => c.key === category)?.name}
+        </h2>
         <div className="movies-list">
           {items.map((item) => {
             const title = item.title || item.name;
@@ -67,7 +71,13 @@ const Search = () => {
             const url = `https://www.themoviedb.org/${category}/${item.id}`;
 
             return (
-              <a key={item.id} href={url} target="_blank" rel="noopener noreferrer" className="movie-link">
+              <a
+                key={item.id}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="movie-link"
+              >
                 <MainContent
                   id={item.id}
                   poster={poster}
@@ -93,7 +103,9 @@ const Search = () => {
           onChange={(e) => setQuery(e.target.value)}
           className="search-input"
         />
-        <button className="search-button" onClick={fetchSearchResults}>Search</button>
+        <button className="search-button" onClick={fetchSearchResults}>
+          Search
+        </button>
       </div>
 
       <div className="search-options">

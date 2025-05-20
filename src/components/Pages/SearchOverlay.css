@@ -1,0 +1,47 @@
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 56px; /* leave space for navigation */
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1200;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.search-inner {
+  background: #1c1c1c;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 5rem;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  font-size: 1.5rem;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Close button styling */
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
