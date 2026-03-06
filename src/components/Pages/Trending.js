@@ -51,7 +51,7 @@ const Trending = () => {
 
         const { data: videoData } = await axios.get(videoUrl);
         const trailer = videoData.results.find(
-          (vid) => vid.type === "Trailer" && vid.site === "YouTube"
+          (vid) => vid.type === "Trailer" && vid.site === "YouTube",
         );
 
         return trailer
@@ -132,7 +132,7 @@ const Trending = () => {
 
   return (
     <div>
-      <h1 className="pTitle">Trending</h1>
+      <h1 className="section-title">Trending</h1>
 
       <div>
         <ul className="category-list">
@@ -178,7 +178,7 @@ const Trending = () => {
 
       {/* Latest Trailers Section */}
       <div className="sectionTrailers">
-        <h1 className="pTitle">Latest Trailers</h1>
+        <h1 className="section-title">Latest Trailers</h1>
         <ul className="category-list">
           {trailerCategories.map((cat) => (
             <li
@@ -253,8 +253,8 @@ const Trending = () => {
                 {expandedDescriptions[trailer.id]
                   ? trailer.overview
                   : trailer.overview.length > 50
-                  ? trailer.overview.substring(0, 50)
-                  : trailer.overview}
+                    ? trailer.overview.substring(0, 50)
+                    : trailer.overview}
 
                 {trailer.overview.length > 50 && (
                   <span

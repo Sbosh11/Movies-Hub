@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
@@ -11,16 +11,21 @@ import SearchIcon from "@mui/icons-material/Search";
 import SearchOverlay from "../components/Pages/SearchOverlay";
 
 export default function SimpleBottomNavigation() {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState("trending");
   const [showSearchOverlay, setShowSearchOverlay] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (value === 0) navigate("/Movies-Hub");
-    else if (value === 1) navigate("/Movies-Hub/Movies");
-    else if (value === 2) navigate("/Movies-Hub/Series");
-    else if (value === 3) setShowSearchOverlay(true);
-  }, [value, navigate]);
+  const handleChange = (event, newValue) => {
+    if (newValue === "search") {
+      setShowSearchOverlay((prev) => !prev); // Toggle overlay
+    } else {
+      setValue(newValue);
+      setShowSearchOverlay(false); // hide overlay when clicking other tabs
+      if (newValue === "trending") navigate("/Movies-Hub");
+      else if (newValue === "movies") navigate("/Movies-Hub/Movies");
+      else if (newValue === "series") navigate("/Movies-Hub/Series");
+    }
+  };
 
   return (
     <>
@@ -32,38 +37,39 @@ export default function SimpleBottomNavigation() {
               color: "#90bce9",
             },
           }}
+          value={value === "search" ? false : value}
+          onChange={handleChange}
           showLabels
-          value={value}
-          onChange={(event, newValue) => setValue(newValue)}
         >
           <BottomNavigationAction
             label="Trending"
+            value="trending"
             icon={<WhatshotIcon />}
             sx={{ color: "#fff" }}
           />
           <BottomNavigationAction
             label="Movies"
+            value="movies"
             icon={<MovieIcon />}
             sx={{ color: "#fff" }}
           />
           <BottomNavigationAction
             label="TV Series"
+            value="series"
             icon={<LocationOnIcon />}
             sx={{ color: "#fff" }}
           />
           <BottomNavigationAction
             label="Search"
+            value="search"
             icon={<SearchIcon />}
             sx={{ color: "#fff" }}
           />
         </BottomNavigation>
       </Box>
 
-      {/* Search Overlay Component */}
-      <SearchOverlay
-        isVisible={showSearchOverlay}
-        onClose={() => setShowSearchOverlay(false)}
-      />
+      {/* Show/hide SearchOverlay */}
+      <SearchOverlay isVisible={showSearchOverlay} />
     </>
   );
 }
