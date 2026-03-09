@@ -1,12 +1,17 @@
-import React from 'react';
-import './Header.css';
-
+import React from "react";
+import "./Header.css";
 
 const Header = () => {
-
   return (
-    <span className="appHeader" id='appHeader'onScroll={(e) => console.log("scrolling!", e.target.scrollTop)} > 🎬 Movies Hub 🎥 </span>
-  )
-}
+    <h1
+      className="appHeader"
+      id="appHeader"
+      onScroll={(e) => console.log("scrolling!", e.target.scrollTop)}
+    >
+      {" "}
+      🎬 Movies Hub{" "}
+    </h1>
+  );
+};
 
-export default Header
+export default Header;

@@ -32,7 +32,7 @@ export default function SimpleBottomNavigation() {
       <Box sx={{ width: "100%", mt: "auto" }}>
         <BottomNavigation
           sx={{
-            bgcolor: "#3B3542",
+            bgcolor: "#b93c3c;",
             "&& .Mui-selected": {
               color: "#90bce9",
             },
